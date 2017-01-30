@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<style>
+.robot{
+  position: relative;
+  left: 230px;
+}
+.antena{
+width: 10px;
+  height: 0px;
+  border: 5px solid transparent;
+  border-top: 10px solid #777;
+  border-bottom: 100px solid #888;
+  position: relative;
+  left: 230px;
+}
+.Head{
+  background: radial-gradient(circle, yellow 15%, transparent 40%),#33FFDD;
+height:150px;
+width:150px;
+border-radius:20px,20px,10px,10px;
+position:relative;
+background-size:50% 100%;
+left:170px;
+border:1px solid;
+}
+.Mouth{
+background: #FF5733;
+width:80px;
+height:30px;
+position:relative;
+top:110px;
+left:35px;
+}
+@keyframes blink {
+  50% {
+    background: radial-gradient(circle, red 15%, transparent 40%), #388E8E;
+  }
+}
+.laser {
+  animation: blink .5s infinite;
+  -webkit-animation: blink .5s infinite;
+  -moz-animation: blink .5s infinite;
+}
+.torso{
+  background: linear-gradient(rgba(0,255,255,1), rgba(0,201,215,4));
+  height:250px;
+  width:250px;
+  position:relative;
+ left:130px;
+  }
+.rectangle{
+height:150px;
+width:200px;
+position:relative;
+}
+.leg1{
+position:relative;
+height:150px;
+width:10px;
+background:linear-gradient(#008080, rgba(0,0,0,0));
+border-left: 5px solid grey;
+  border-right: 5px solid grey;
+  top:-340px;
+  left:40px;
+}
+.foot1{
+position:relative;
+height:50px;
+width:50px;
+border-radius:30px 30px 0 0;
+background:#FF0000;
+border:1px solid gray;
+z-index=-1;
+left:25px;
+top:-500px;
+}
+.leg2{
+position:relative;
+height:150px;
+width:10px;
+background:linear-gradient(#008080, rgba(0,0,0,0));
+border-left: 5px solid grey;
+  border-right: 5px solid grey;
+  top:-490px;
+  left: 190px;
+}
+.foot2{
+position:relative;
+height:50px;
+width:50px;
+border-radius:30px 30px 0 0;
+background:#FF0000;
+border:1px solid gray;
+z-index=-1;
+left:175px;
+top:-550px;
+}
+.ear1{
+height: 40px;
+width:30px;
+position: relative;
+border-radius:30px 0 0 30px;
+background:#FF5733;
+z-index=-1;
+left:-30px;
+}
+.ear2{
+  height: 40px;
+width:30px;
+position: relative;
+border-radius:0 30px 30px 0;
+background:#FF5733;
+z-index=-1;
+left:150px;
+top:-37px;
+}
+.hand1{
+height:45px;
+width:25px;
+position: relative;
+border-radius:10px;
+background:#FF5733;
+z-index=-1;
+left:-30px;
+}
+.hand2{
+height:45px;
+width:25px;
+position: relative;
+border-radius:10px;
+background:#FF5733;
+z-index=-1;
+left:255px;
+top:-42px;
+}
+.hand3{
+position:relative;
+height:150px;
+width:10px;
+background:#33BEFF;
+border-left: 1px grey;
+  border-right: 1px grey;
+  top:-45px;
+  left:-22px;
+}
+.hand4{
+position:relative;
+height:150px;
+width:10px;
+background:#33BEFF;
+border-left: 1px grey;
+  border-right: 1px grey;
+  top:-193px;
+  left:263px;
+}
+.hand5{
+height:25px;
+width:25px;
+position: relative;
+border-radius:20px;
+background:#FF5733;
+z-index=-1;
+left:-28px;
+top:-200px;
+}
+.hand6{
+height:25px;
+width:25px;
+position: relative;
+border-radius:20px;
+background:#FF5733;
+z-index=-1;
+left:258px;
+top:-220px;
+}
+button{
+   position: relative;
+   top: 200px;
+ padding: 10px;
+ margin: 10px ;
+ color: black;
+ font-weight: bold;
+ border-radius: 5px;
+ border: 5px solid black;
+ height: 45px;
+ left:200px;
+ }
+
+.eyes{
+   margin:10px;
+   }
+.move{
+     padding: 8px 22px 8px 22px;
+   }
+   .color{
+   padding: 8px 20px 8px 20px;
+   }
+   .moverobot{
+   	animation: move 5s infinite;
+     -webkit-animation:move 5s infinite;
+ }
+   .flash{
+     margin-left: 30px ;
+   }
+
+   @keyframes move{
+
+    50%{
+     position: relative;
+     left:800px;
+
+    }
+
+   }
+   @-webkit-keyframes move{
+
+    50%{
+     position: relative;
+     left:800px;
+
+    }
+
+   }
+   @-moz-keyframes move{
+
+    50%{
+     position: relative;
+     left:800px;
+
+    }
+
+   }
+
+</style>
+</head>
+
+<body>
+<div class="robot">
+<div class="antena"></div>
+<div class="Head">
+<div class="Mouth">
+</div>
+<div class="ear1"></div>
+<div class="ear2"></div>
+</div>
+
+<div class="torso">
+  <div class="hand1"></div>
+  <div class="hand2"></div>
+  <div class="hand3"></div>
+  <div class="hand4"></div>
+  <div class="hand5"></div>
+  <div class="hand6"></div>
+  <div class="rectangle"></div>
+  <div class="leg1"></div>
+  <div class="leg2"></div>
+  <div class="foot1"></div>
+  <div class="foot2"></div>
+    </div>
+</div>
+<button class="eyes">Blink</button>
+<button class="color">Change Color</button>
+<button class="move">Move</button>
+<script>
+$(".eyes").click(function() {
+
+ $(".Head").toggleClass('laser');
+ });
+ $(".color").click(function() {
+ var red = Math.floor(Math.random() * 255);
+ var green = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
+ var randomRGBA='rgba('+red+','+green+','+blue+',1)';
+ $("body").css("background",randomRGBA);
+ });
+
+    $(".move").click(function() {
+      		$(".robot").toggleClass('moverobot');
+    		});
+    $("button").hover(function(){
+        $(this).css("background-color", "blue");
+        }, function(){
+        $(this).css("background-color", "#cc5");
+    });
+</script>
+</body>
